@@ -8,7 +8,6 @@
 	
 	<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
 	<link rel="stylesheet" href="animation.css">
-	//cdn.datatables.net/1.10.3/css/jquery.dataTables.min.css
 	<style> 
 	body {
       font-family: 'Montserrat', arial, sans-serif;
@@ -25,7 +24,6 @@
 			}
 
 			h1 { 
-				margin-top: -350px;
 				font-size: 60px;
 				font-weight: 700;
 				color:#9B59B6;
@@ -46,13 +44,11 @@
 input[type="text"] {
 		font-size: 40px;
 		width: 250px;
-		margin-top: -200px;
 
 	}
 
 #left {
     width: 350px;
-    margin-top: -200px;
     font-size: 30px;
 	color:black;
 }
@@ -116,9 +112,9 @@ ul {
     <div id="left">
     	<ul id="menu">
 			<li id="find">+ find your friends</li>
-			<li class="friends">kylesukley</li>
-			<li class="friends">dianatosca 2</li>
-			<li class="friends">jose_champ</li>
+			<li class="friends" id="kyle">kylesukley</li>
+			<li class="friends" id="diana">dianatosca 2</li>
+			<li class="friends" id="jose">jose_champ</li>
 		</ul>
     	<!-- <input type = "text" id = "group"
     <div id="right"><h2> find a group </h2> name = "group" > -->
@@ -129,11 +125,21 @@ ul {
 	$(function() {
 
       $('.friends').slideToggle();
+    
     $('#find').click(function(){
 
       $('.friends').slideToggle();
     	$('.friends').css('visibility', 'visible')
+     
     });
+
+  
+      $('.friends').click(function() {
+        var temp = $(this).attr('id');
+        $(this).css('background-color', '#ff9');
+        $(this).css('color', 'black');
+        $(this).text('pending ' + temp);
+    })
 });
 
 		</script>
