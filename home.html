@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			home
+		</title>
+		<!-- jQuery -->
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+	<link rel="stylesheet" href="animation.css">
+	//cdn.datatables.net/1.10.3/css/jquery.dataTables.min.css
+	<style> 
+	body {
+      font-family: 'Montserrat', arial, sans-serif;
+      font-size: 342px;
+      font-weight: 700;
+      color: white;
+      text-align: center; 
+      text-rendering: optimizeLegibility;
+
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+			}
+
+			h1 { 
+				margin-top: -350px;
+				font-size: 60px;
+				font-weight: 700;
+				color:#9B59B6;
+			}
+
+		
+
+
+/* sizes */
+/*#main-wrap > div { min-height: 450px; }*/
+
+
+#header,
+#footer {
+    min-height: 40px;
+}
+
+input[type="text"] {
+		font-size: 40px;
+		width: 250px;
+		margin-top: -200px;
+
+	}
+
+#left {
+    width: 350px;
+    margin-top: -200px;
+    font-size: 30px;
+	color:black;
+}
+
+#find {
+    background-color: #9B59B6;
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+	height: 60px;
+}
+
+.friends{visibility: hidden;
+display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-weight: 100;
+}
+
+ul {
+	list-style: none;
+}
+
+
+.friends:nth-child(odd) {
+    background-color: #028482;
+    color: white;
+    height: 50px;
+    
+}
+
+.friends:nth-child(even) {
+    background-color: #3399FF;
+    color: white;
+    height: 50px;
+}
+
+/*#right{
+    float: right;
+    width: 300px;
+    border: 2px solid black;
+    margin-top: -200px;
+    margin-left: 100px;
+    
+}   */
+
+	</style>
+	</head>
+
+	<body>
+
+		<div id="header"><h1> hey there, <div id = "user"> *insert username* </div> </h1></div>
+	<div id="main-wrap">
+    
+    <div id="left">
+    	<ul id="menu">
+			<li id="find">+ find your friends</li>
+			<li class="friends">kylesukley</li>
+			<li class="friends">dianatosca 2</li>
+			<li class="friends">jose_champ</li>
+		</ul>
+    	<!-- <input type = "text" id = "group"
+    <div id="right"><h2> find a group </h2> name = "group" > -->
+   	 </div>
+
+	</div>
+	<script> 
+	$(function() {
+
+      $('.friends').slideToggle();
+    $('#find').click(function(){
+
+      $('.friends').slideToggle();
+    	$('.friends').css('visibility', 'visible')
+    });
+});
+
+		</script>
+	</body>
+</html>
